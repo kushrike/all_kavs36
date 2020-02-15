@@ -4,19 +4,6 @@ var direction = [];
 
 $(".start").click(function () {
     firstIlluminate();
-
-    var callCount = 1;
-    var repeater = setInterval(function () {
-        if (callCount < 10) {
-            illuminate();
-            callCount += 1;
-        } else {
-            clearInterval(repeater);
-            shutdown();
-        }
-    }, 3000);
-
-
     $.ajax({
         url: "http://localhost:5000/activateModel/",
         type: "POST",
@@ -29,6 +16,24 @@ $(".start").click(function () {
     }).done(function (data) {
         console.log(data);
     });
+
+    setTimeout(function () {
+
+        var callCount = 0;
+        var repeater = setInterval(function () {
+            if (callCount < 10) {
+                illuminate();
+                callCount += 1;
+            } else {
+                clearInterval(repeater);
+                shutdown();
+            }
+        }, 3000);
+
+    }, 5000);
+
+
+
 });
 
 function shutdown() {

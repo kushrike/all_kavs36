@@ -12,7 +12,7 @@ cors=CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
 client = pymongo.MongoClient(
-    "mongodb+srv://###/test?retryWrites=true&w=majority")
+   "mongodb+srv://#####@hack36-kadbj.mongodb.net/test?retryWrites=true&w=majority")
 db = client.test
 
 @app.route('/')
@@ -21,6 +21,8 @@ def index():
         return 'You are logged in as ' + session['username']
 
     return render_template('index.html')
+
+    
 
 @app.route('/inc_stimuli')
 def inc_stimuli():
@@ -51,10 +53,6 @@ def login():
 
     return 'Invalid username/password combination'
 
-@app.route('/blink')
-def blinker():
-    return render_template('blink.html') 
-
 @app.route('/logout')
 def logout():
     session.clear()
@@ -82,7 +80,7 @@ eyeData = {}
 def main_interface():
     response = request.get_json()
     eyeData = response
-    # print(response)
+    print(response)
     return response
 
 
@@ -90,6 +88,7 @@ def main_interface():
 def model_interface():
     res=request.get_data()
     eye_coord=eyetracker.get_eye_direction()
+    eff_size=
     print(eye_coord)
     if(res=="true"):
         print(res)
