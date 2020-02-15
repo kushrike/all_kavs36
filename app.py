@@ -88,7 +88,6 @@ def main_interface():
 def model_interface():
     res=request.get_data()
     eye_coord=eyetracker.get_eye_direction()
-    eff_size=
     print(eye_coord)
     if(res=="true"):
         print(res)
