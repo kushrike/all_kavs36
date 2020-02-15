@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Eye Tracker</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/eye_track.css') }}">
+<script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+<!-- <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script> -->
+{% endblock  %}
+
+{% block body %}
+<div class="gallery">
+    <figure class="gallery__item">
+        <div class="container">
+            <button type="button" style="vertical-align:middle" class="button start">START</button>
+        </div>
+    </figure>
+    <figure class="gallery__item">
+        <div class="container">
+        </div>
+    </figure>
+    <figure class="gallery__item">
+        <div class="container">
+        </div>
+    </figure>
+    <figure class="gallery__item">
+        <div class="container">
+            
+        </div>
+    </figure>
+    <figure class="gallery__item">
+        <div class="container">
+        </div>
+    </figure>
+    <figure class="gallery__item">
+        <div class="container">
+            <div class="bg" id="b1"></div>
+            <div class="bulb" id="B1"></div>
+            <div class="wire"></div>
+            <div class="wire-loop"></div>
+            <div class="wire-center"></div>
+            <div class="plug"></div>
+            <div class="plug-dark"></div>
+            <div class="eye"></div>
+            <div class="mouth"></div>
+        </div>
+    </figure>
+    <figure class="gallery__item">
+        <div class="container">
+            <div class="bg" id="b2"></div>
+            <div class="bulb" id="B2"></div>
+            <div class="wire"></div>
+            <div class="wire-loop"></div>
+            <div class="wire-center"></div>
+            <div class="plug"></div>
+            <div class="plug-dark"></div>
+            <div class="eye"></div>
+            <div class="mouth"></div>
+        </div>
+    </figure>
+    <figure class="gallery__item">
+        <div class="container">
+            <div class="bg" id="b3"></div>
+            <div class="bulb" id="B3"></div>
+            <div class="wire"></div>
+            <div class="wire-loop"></div>
+            <div class="wire-center"></div>
+            <div class="plug"></div>
+            <div class="plug-dark"></div>
+            <div class="eye"></div>
+            <div class="mouth"></div>
+        </div>
+    </figure>
+    <figure class="gallery__item">
+        <div class="container">
+            <div class="bg" id="b4"></div>
+            <div class="bulb" id="B4"></div>
+            <div class="wire"></div>
+            <div class="wire-loop"></div>
+            <div class="wire-center"></div>
+            <div class="plug"></div>
+            <div class="plug-dark"></div>
+            <div class="eye"></div>
+            <div class="mouth"></div>
+        </div>
+    </figure>
+    <figure class="gallery__item">
+        <div class="container">
+            <div class="bg" id="b5"></div>
+            <div class="bulb" id="B5"></div>
+            <div class="wire"></div>
+            <div class="wire-loop"></div>
+            <div class="wire-center"></div>
+            <div class="plug"></div>
+            <div class="plug-dark"></div>
+            <div class="eye"></div>
+            <div class="mouth"></div>
+        </div>
+    </figure>
+</div>
+<script src="{{ url_for('static', filename='eye_track.js') }}"></script>
+{% endblock %}
