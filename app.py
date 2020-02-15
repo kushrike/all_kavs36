@@ -9,7 +9,7 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 
 
 client = pymongo.MongoClient(
-   "mongodb+srv://#####:##########.mongodb.net/test?retryWrites=true&w=majority")
+    "mongodb+srv://#####@hack36-kadbj.mongodb.net/test?retryWrites=true&w=majority")
 db = client.test
 
 @app.route('/')
@@ -32,7 +32,9 @@ def login():
 
     return 'Invalid username/password combination'
 
-
+@app.route('/blink')
+def blinker():
+    return render_template('blink.html') 
 
 @app.route('/logout')
 def logout():
