@@ -22,6 +22,8 @@ def index():
 
     return render_template('index.html')
 
+    
+
 @app.route('/inc_stimuli')
 def inc_stimuli():
     return render_template('inc_stimuli.html')
@@ -78,7 +80,7 @@ eyeData = {}
 def main_interface():
     response = request.get_json()
     eyeData = response
-    # print(response)
+    print(response)
     return response
 
 
@@ -86,6 +88,7 @@ def main_interface():
 def model_interface():
     res=request.get_data()
     eye_coord=eyetracker.get_eye_direction()
+    eff_size=
     print(eye_coord)
     if(res=="true"):
         print(res)
