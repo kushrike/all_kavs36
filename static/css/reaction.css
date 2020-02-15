@@ -1,0 +1,20 @@
+body {
+
+    background-image: url('../img/reactionBG.jpg');
+    background-repeat: repeat;
+    cursor: url('../img/cursor.gif'), default;
+    overflow: hidden;
+}
+
+
+
+html,
+body {
+    height: 100%;
+}
+
+#box{
+    width: 180px;
+    height: 180px;
+    position: absolute;
+}

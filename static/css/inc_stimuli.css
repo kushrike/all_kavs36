@@ -1,0 +1,8 @@
+body {
+    background-color: darkslategray !important;
+}
+
+html,
+body {
+    height: 100% !important;
+}
