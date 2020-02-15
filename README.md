@@ -1,4 +1,4 @@
-# all_kavs
+# Team : all_kavs
 # Idea name : ZEMOTACQY
 ## IDEA DESCRIPTION --
 Attention Deficit Hyperactivity Disorder (ADHD) is one of the most common disorders of childhood, affecting 3–10% of school-age children (Goldman et al. 1998; Burd et al. 2003; Faraone et al. 2003; Ford et al. 2003). It is characterized by age-inappropriate levels of inattention, impulsivity and overactivity.
