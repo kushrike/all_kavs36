@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>REACTION TIMER</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/reaction.css') }}">
+<script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+
+<img id="box" src="../static/img/sun.webp" alt="img" height="180px">
+<style>
+    .what:hover {
+        cursor: pointer;
+        opacity: .75;
+    }
+
+    .what {
+        display: block;
+        width: 28px;
+        height: 28px;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        background-size: 100% 100%;
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB3aWR0aD0iMjNweCIgaGVpZ2h0PSIyM3B4IiB2aWV3Qm94PSIwIDAgMjMgMjMiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+ICAgICAgICA8dGl0bGU+U2xpY2UgMTwvdGl0bGU+ICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPiAgICA8ZGVmcz48L2RlZnM+ICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPiAgICAgICAgPHBhdGggZD0iTTExLjUsMjIgQzE3LjI5ODk4OTksMjIgMjIsMTcuMjk4OTg5OSAyMiwxMS41IEMyMiw1LjcwMTAxMDEzIDE3LjI5ODk4OTksMSAxMS41LDEgQzUuNzAxMDEwMTMsMSAxLDUuNzAxMDEwMTMgMSwxMS41IEMxLDE3LjI5ODk4OTkgNS43MDEwMTAxMywyMiAxMS41LDIyIFoiIGlkPSJPdmFsIiBzdHJva2U9IiMzQTA1M0EiIGZpbGw9IiNGRkZGRkYiPjwvcGF0aD4gICAgICAgIDxwYXRoIGQ9Ik0xMi4yNzkyOTY5LDEzLjQ2Mjg5MDYgTDEwLjc4NTE1NjIsMTMuNDYyODkwNiBDMTAuNzgxMjUsMTMuMjQ4MDQ1OCAxMC43NzkyOTY5LDEzLjExNzE4NzcgMTAuNzc5Mjk2OSwxMy4wNzAzMTI1IEMxMC43NzkyOTY5LDEyLjU4NTkzNTEgMTAuODU5Mzc0MiwxMi4xODc1MDE2IDExLjAxOTUzMTIsMTEuODc1IEMxMS4xNzk2ODgzLDExLjU2MjQ5ODQgMTEuNDk5OTk3NiwxMS4yMTA5Mzk1IDExLjk4MDQ2ODgsMTAuODIwMzEyNSBDMTIuNDYwOTM5OSwxMC40Mjk2ODU1IDEyLjc0ODA0NjQsMTAuMTczODI4NyAxMi44NDE3OTY5LDEwLjA1MjczNDQgQzEyLjk4NjMyODgsOS44NjEzMjcxNyAxMy4wNTg1OTM4LDkuNjUwMzkxNzggMTMuMDU4NTkzOCw5LjQxOTkyMTg4IEMxMy4wNTg1OTM4LDkuMDk5NjA3NzcgMTIuOTMwNjY1Myw4LjgyNTE5NjQ2IDEyLjY3NDgwNDcsOC41OTY2Nzk2OSBDMTIuNDE4OTQ0LDguMzY4MTYyOTIgMTIuMDc0MjIwOSw4LjI1MzkwNjI1IDExLjY0MDYyNSw4LjI1MzkwNjI1IEMxMS4yMjI2NTQyLDguMjUzOTA2MjUgMTAuODczMDQ4Myw4LjM3MzA0NTY4IDEwLjU5MTc5NjksOC42MTEzMjgxMiBDMTAuMzEwNTQ1NSw4Ljg0OTYxMDU3IDEwLjExNzE4OCw5LjIxMjg4ODE4IDEwLjAxMTcxODgsOS43MDExNzE4OCBMOC41LDkuNTEzNjcxODggQzguNTQyOTY4OTYsOC44MTQ0NDk2MyA4Ljg0MDgxNzU1LDguMjIwNzA1NTcgOS4zOTM1NTQ2OSw3LjczMjQyMTg4IEM5Ljk0NjI5MTgzLDcuMjQ0MTM4MTggMTAuNjcxODcwNSw3IDExLjU3MDMxMjUsNyBDMTIuNTE1NjI5Nyw3IDEzLjI2NzU3NTMsNy4yNDcwNjc4NCAxMy44MjYxNzE5LDcuNzQxMjEwOTQgQzE0LjM4NDc2ODQsOC4yMzUzNTQwMyAxNC42NjQwNjI1LDguODEwNTQzNTkgMTQuNjY0MDYyNSw5LjQ2Njc5Njg4IEMxNC42NjQwNjI1LDkuODMwMDc5OTQgMTQuNTYxNTI0NSwxMC4xNzM4MjY1IDE0LjM1NjQ0NTMsMTAuNDk4MDQ2OSBDMTQuMTUxMzY2MiwxMC44MjIyNjcyIDEzLjcxMjg5NCwxMS4yNjM2NjkxIDEzLjA0MTAxNTYsMTEuODIyMjY1NiBDMTIuNjkzMzU3NiwxMi4xMTEzMjk2IDEyLjQ3NzUzOTUsMTIuMzQzNzQ5MSAxMi4zOTM1NTQ3LDEyLjUxOTUzMTIgQzEyLjMwOTU2OTksMTIuNjk1MzEzNCAxMi4yNzE0ODQzLDEzLjAwOTc2MzQgMTIuMjc5Mjk2OSwxMy40NjI4OTA2IEwxMi4yNzkyOTY5LDEzLjQ2Mjg5MDYgWiBNMTAuNzg1MTU2MiwxNS42Nzc3MzQ0IEwxMC43ODUxNTYyLDE0LjAzMTI1IEwxMi40MzE2NDA2LDE0LjAzMTI1IEwxMi40MzE2NDA2LDE1LjY3NzczNDQgTDEwLjc4NTE1NjIsMTUuNjc3NzM0NCBaIiBpZD0iPyIgZmlsbD0iIzNBMDUzQSI+PC9wYXRoPiAgICA8L2c+PC9zdmc+);
+    }
+</style><a href="http://mojs.io/tutorials/shape/" class="what" title="tutorial" target="_blank"></a>
+<script src="https://cdn.jsdelivr.net/mojs/0.265.6/mo.min.js"></script>
+<script src="https://cdn.jsdelivr.net/mojs-player/0.43.15/mojs-player.min.js"></script>
+<script src="{{ url_for('static', filename='js/reaction.js') }}"></script>
+{% endblock  %}

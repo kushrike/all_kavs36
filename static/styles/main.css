@@ -1,0 +1,100 @@
+body {
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  rect {
+    fill: none;
+    pointer-events: all;
+  }
+  
+  .smallTextStroke {
+    font-family: sans-serif;
+    font-size: 12px;
+    fill: none;
+    stroke: black;
+    stroke-width: 1px;
+  }
+  .smallText {
+    font-family: sans-serif;
+    font-size: 12px;
+    fill: white;
+  }
+  
+  .bigTextStroke {
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    fill: none;
+    stroke: black;
+    stroke-width: 4px;
+  }
+  
+  .bigText {
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    fill: white;
+  }
+  
+  .cell {
+  }
+  
+  .cell.wall {
+    fill: #000;
+    stroke: #000;
+  }
+  
+  .cell.air {
+    fill: #ddd;
+    stroke: #999;
+  }
+  
+  .cell.blue {
+    stroke: blue;
+    stroke-opacity: .8;
+  }
+  
+  .cell.red {
+    stroke: red;
+    stroke-opacity: .8;
+  }
+  
+  .ball {
+    fill: #f00;
+    fill-opacity: 1;
+    stroke: #333;
+    stroke-opacity: .5;
+  }
+  
+  .builder.head {
+    stroke: #333;
+    stroke-opacity: .5;
+  }
+  
+  .builder.blue {
+    fill: blue;
+  }
+  
+  .builder.red {
+    fill: red;
+  }
+  
+  .builder.tail {
+    fill-opacity: .4;
+  }
+  
+  .switch {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 0px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  #nextLevelButton, #playAgainButton {
+    position: absolute;
+    width: 100px;
+    visibility: hidden;
+  }
