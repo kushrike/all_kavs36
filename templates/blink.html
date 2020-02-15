@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Blink</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/blink.css') }}">
+
+{% endblock %}
+
+{% block body %}
+
+<div id="sun">☀️</div>
+<div id="forest"></div>
+<audio id="bgAudio" controls>
+    <source src="/static/sounds/1.mp3" type="audio/mpeg">
+</audio>
+<div id="grass">
+  <div id="bug">🐞</div>
+</div>
+<css-doodle id="dood"></css-doodle>
+
+<script src="https://unpkg.com/css-doodle@0.7.2/css-doodle.min.js"></script>
+<script src="{{ url_for('static', filename='blink.js') }}"></script>
+
+{% endblock %}
