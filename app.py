@@ -26,6 +26,10 @@ def index():
 def inc_stimuli():
     return render_template('inc_stimuli.html')
 
+@app.route('/reaction')
+def reaction_time():
+    return render_template('reaction.html')
+
 @app.route('/eye')
 def eye_track():
     return render_template('eye_track.html')
