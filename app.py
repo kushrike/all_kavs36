@@ -6,6 +6,7 @@ from flask_cors import CORS
 from eye_movement.eyepi import EyeTracker
 from detect_blinks import Blinker
 import subprocess
+import pyautogui 
 
 eyetracker = EyeTracker()
 blinker = Blinker()
@@ -35,6 +36,7 @@ def inc_stimuli():
 
 @app.route('/reaction')
 def reaction_time():
+    subprocess.call('./ss.sh')
     return render_template('reaction.html')
 
 @app.route('/eye')
