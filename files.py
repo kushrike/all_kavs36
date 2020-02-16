@@ -15,7 +15,7 @@ file_service.create_file_from_path(
     'hack36',
     'hack36',  # We want to create this blob in the root directory, so we specify None for the directory_name
     'file1',
-    '86282.jpg',
+    'foo.pdf'
     content_settings=ContentSettings(content_type='image/jpg'))
 
 file_service.get_file_to_path('myshare', None, 'myfile', 'out.jpg')
