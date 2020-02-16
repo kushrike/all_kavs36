@@ -1,5 +1,5 @@
-document.addEventListener("DOMContentLoaded", function (event) {
-  document.getElementById("bgAudio").play();
+document.addEventListener("DOMContentLoaded", function(event) {
+    document.getElementById("bgAudio").play();
 
 
 
@@ -54,8 +54,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
       rotateZ(@r(-.05turn, .05turn))
       ;
     }
-  }
-`;
+  `;
+//   $.ajax({
+//     url: "http://localhost:5000/activateBlink/",
+//     type: "POST",
+//     datatype: "text",
+//     contentType: "text/plain",
+//     data: "true",
+//     success: function () {
+//         console.log("Executed");
+//     }
+// }).done(function (data) {
+//     console.log(data);
+// });
     return doodl;
   }
 
@@ -64,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   var body = document.querySelector("body");
   var dood = document.getElementById("dood");
   var forest = document.querySelector("div#forest");
+  
   body.onload = init;
   window.addEventListener('resize', init, false);
 
@@ -104,5 +116,4 @@ document.addEventListener("DOMContentLoaded", function (event) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
-
 });

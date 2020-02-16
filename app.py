@@ -4,7 +4,12 @@ import bcrypt
 from livereload import Server
 from flask_cors import CORS
 from eye_movement.eyepi import EyeTracker
+from detect_blinks import Blinker
+import subprocess
+
 eyetracker = EyeTracker()
+blinker = Blinker()
+
 
 app = Flask(__name__)
 cors=CORS(app)
@@ -38,7 +43,17 @@ def eye_track():
 
 @app.route('/blink')
 def blinker():
+    # subprocess.call('blinky.sh')
     return render_template('blink.html')
+
+@app.route('/blinker')
+def blinki():
+    subprocess.call('./blinky.sh')
+    return render_template('blank.html')
+
+# @app.route('/activateBlink/', methods=['POST'])
+# def blinkOn():
+#     bb = blinker.doer()
 
 
 @app.route('/login', methods=['POST'])
@@ -47,7 +62,7 @@ def login():
     login_user = users.find_one({'name' : request.form['username']})
 
     if login_user:
-        if bcrypt.hashpw(request.form['pass'].encode('utf-8'), login_user['password'].encode('utf-8')) == login_user['password'].encode('utf-8'):
+        if bcrypt.hashpw(request.form['pass'].encode('utf-8'), login_user['password']) == login_user['password']:
             session['username'] = request.form['username']
             return redirect(url_for('index'))
 
@@ -88,6 +103,7 @@ def main_interface():
 def model_interface():
     res=request.get_data()
     eye_coord=eyetracker.get_eye_direction()
+    # eff_size=
     print(eye_coord)
     if(res=="true"):
         print(res)
