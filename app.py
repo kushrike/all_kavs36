@@ -18,7 +18,7 @@ cors=CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
 client = pymongo.MongoClient(
-   "mongodb+srv://###@hack36-kadbj.mongodb.net/test?retryWrites=true&w=majority")
+   "mongodb+srv://admin:zemotacqy@hack36-kadbj.mongodb.net/test?retryWrites=true&w=majority")
 db = client.test
 
 @app.route('/')
