@@ -21,14 +21,12 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 {% endblock %}
 
 {% block body %}
 <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-<div id='stars'></div>
-<div id='stars2'></div>
-<div id='stars3'></div>
-<div id='title'></div>
+
 <div class="container">
         <div id="box0" style="position: absolute; width:100px;"><span class="spinner-grow text-primary" role="status"
                         style="animation:spinner-grow 2s linear infinite; width: 10rem; height: 10rem;"></span></div>
@@ -51,9 +49,12 @@
         <div id="box9" style="position: absolute; width:100px;"><span class="spinner-grow text-primary" role="status"
                         style="animation:spinner-grow 2s linear infinite; width: 10rem; height: 10rem;"></span></div>
 
+        
 
-
-
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
+        <div id='title'></div>
 
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
                 integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -66,5 +67,6 @@
                 crossorigin="anonymous"></script>
         <script src="{{ url_for('static', filename='js/inc_stimuli.js') }}"></script>
 </div>
+<canvas id="myChart"></canvas>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
 {% endblock %}

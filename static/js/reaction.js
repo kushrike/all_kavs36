@@ -14,6 +14,12 @@ $("#box").on('click', function () {
                 console.log(timings);
             }
 
+            if(timings.length >9){
+              $("#textArea").append("<h3>THANKS FOR PLAYING!</h3>");
+              $("#box").remove();
+              createGraph(timings);
+            }
+
             });
 
         function randomsquare() {
@@ -28,15 +34,6 @@ $("#box").on('click', function () {
                 $("#box").css("display", "block");
                 createdTime = Date.now();
             }, t)
-        }
-
-        function randomcolor() {
-            var arr = '0123456789abcdef';
-            var a = '#';
-            for (var i = 0; i < 6; i++) {
-                a += arr[Math.round(Math.random() * 15)];
-            }
-            return a;
         }
 
 
@@ -75,3 +72,28 @@ $("#box").on('click', function () {
             replay();
           
           });
+
+
+          function createGraph(arr){
+          var ctx = document.getElementById('myChart').getContext('2d');
+          var chart = new Chart(ctx, {
+              // The type of chart we want to create
+              type: 'line',
+          
+              // The data for our dataset
+              data: {
+                  labels: ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'],
+                  datasets: [{
+                      label: 'Reaction Timings',
+                      backgroundColor: 'rgb(255, 99, 132)',
+                      borderColor: 'rgb(255, 99, 132)',
+                      data: arr
+                  }]
+              },
+          
+              // Configuration options go here
+              options: {}
+          });
+          $("#myChart").css('width', '80%');
+          $("#myChart").css('background-color', '#99ff99');
+        }
