@@ -22,6 +22,6 @@ The result of these four tasks will be visualized using proper plots, graphs and
 
 Another part of our idea revolves around the storage of medical reports and documents of patients on the cloud securely (accessible only by medical authorities and patients themselves), which would solve the nefarious problem of absent medical records. Thus, replacing the conventional paper and hardcopy-based recording system. 
 
-The reaction tester can be found at [https://vaibhavrajsingh2001.github.io/reaction.io/](https://vaibhavrajsingh2001.github.io/reaction.io/)
-The working cideo is available at [https://www.youtube.com/watch?v=ZHkG9nMG6C4&t=2s](https://www.youtube.com/watch?v=ZHkG9nMG6C4&t=2s)
+The reaction tester can be found at [https://vaibhavrajsingh2001.github.io/reaction.io/](https://vaibhavrajsingh2001.github.io/reaction.io/) <br>
+The working video is available at [https://www.youtube.com/watch?v=ZHkG9nMG6C4&t=2s](https://www.youtube.com/watch?v=ZHkG9nMG6C4&t=2s) <br>
 The descriptive idea and related things can be accessed [here](https://drive.google.com/open?id=1jjA1oRKHpFGiYzUHUpM6xuBgrCpochzl)
