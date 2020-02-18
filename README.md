@@ -24,4 +24,4 @@ Another part of our idea revolves around the storage of medical reports and docu
 
 The reaction tester can be found at [https://vaibhavrajsingh2001.github.io/reaction.io/](https://vaibhavrajsingh2001.github.io/reaction.io/) <br>
 The working video is available at [https://www.youtube.com/watch?v=ZHkG9nMG6C4&t=2s](https://www.youtube.com/watch?v=ZHkG9nMG6C4&t=2s) <br>
-The descriptive idea and related things can be accessed [here](https://drive.google.com/open?id=1jjA1oRKHpFGiYzUHUpM6xuBgrCpochzl)
+The descriptive idea and related details can be accessed [here](https://drive.google.com/open?id=1jjA1oRKHpFGiYzUHUpM6xuBgrCpochzl)
